@@ -61,7 +61,7 @@ namespace ConsoleApp2
         public void SaveFile()
         {
             Program numberemployee = new Program();
-            TextWriter File = new StreamWriter("C:\\Payroll\\Payroll.txt", true);
+            TextWriter File = new StreamWriter("C:\\Payroll.txt", true);
             File.WriteLine("Employee: " + numberemployee.main);
             File.WriteLine("First Name: " + data.FirstName1);
             File.WriteLine("Last Name: " + data.LastName1);

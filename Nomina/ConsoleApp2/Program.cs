@@ -15,11 +15,13 @@ namespace ConsoleApp2
                 Pays pays = new Pays();
                 Console.WriteLine("Welcome to Payroll");
                 Console.WriteLine("1. Add Employee \n2. Exit the program");
+            try
+            {
                 int menu = int.Parse(Console.ReadLine());
                 switch (menu)
                 {
-                    case 1:                        
-                        {                            
+                    case 1:
+                        {
                             do
                             {
                                 Console.WriteLine("Employee: " + program.main);
@@ -31,19 +33,26 @@ namespace ConsoleApp2
                                 menu = int.Parse(Console.ReadLine());
                                 program.main++;
                             } while (menu != 2);
-                          break;
-                        }
-                    case 2:
-                        {                            
-                            Console.WriteLine("Exit the program");                            
                             break;
                         }
-                   default:
-                    {
-                        Console.WriteLine("Typing Error");
-                        break;
-                    } 
-                }           
+                    case 2:
+                        {
+                            Console.WriteLine("Exit the program");
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Typing Error");
+                            break;
+                        }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+                 
         }
     }
 }
